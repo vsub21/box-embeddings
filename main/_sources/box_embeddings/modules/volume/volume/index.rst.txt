@@ -1,0 +1,114 @@
+:mod:`box_embeddings.modules.volume.volume`
+===========================================
+
+.. py:module:: box_embeddings.modules.volume.volume
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.volume.volume.Volume
+   box_embeddings.modules.volume.volume.HardVolume
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.volume.volume.hard_volume
+   box_embeddings.modules.volume.volume.log_hard_volume
+
+
+.. data:: eps
+   
+
+   
+
+.. class:: Volume(log_scale: bool = True, **kwargs: Any)
+
+
+   Bases: :class:`torch.nn.Module`, :class:`box_embeddings.common.registrable.Registrable`
+
+   Base volume class
+
+   .. attribute:: default_implementation
+      :annotation: = hard
+
+      
+
+   .. method:: forward(self, box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor) -> torch.Tensor
+      :abstractmethod:
+
+      Base implementation is hard (ReLU) volume.
+
+      :param box_tensor: Input box tensor
+
+      :raises NotImplementedError: base class
+
+
+   .. method:: register(cls: Type[T], name: str, constructor: str = None, exist_ok: bool = False) -> Callable[([Type[T]], Type[T])]
+      :classmethod:
+
+      Transparent method
+
+      :param name: TODO
+      :param constructor: TODO
+      :param exist_ok: TODO
+
+      :returns: a wrapped callable
+
+
+
+.. function:: hard_volume(box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor) -> torch.Tensor
+
+   Volume of boxes. Returns 0 where boxes are flipped.
+
+   :param box_tensor: input
+
+   :returns: Tensor of shape (..., ) when self has shape (..., 2, num_dims)
+
+
+.. function:: log_hard_volume(box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor) -> torch.Tensor
+
+
+.. class:: HardVolume(log_scale: bool = True, **kwargs: Any)
+
+
+   Bases: :class:`box_embeddings.modules.volume.volume.Volume`
+
+   Hard ReLU based volume.
+
+   .. attribute:: default_implementation
+      :annotation: = hard
+
+      
+
+   .. method:: forward(self, box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor) -> torch.Tensor
+
+      Hard ReLU base volume.
+
+      :param box_tensor: TODO
+
+      :returns: torch.Tensor
+
+
+   .. method:: register(cls: Type[T], name: str, constructor: str = None, exist_ok: bool = False) -> Callable[([Type[T]], Type[T])]
+      :classmethod:
+
+      Transparent method
+
+      :param name: TODO
+      :param constructor: TODO
+      :param exist_ok: TODO
+
+      :returns: a wrapped callable
+
+
+

@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box_embeddings.modules.volume.bessel_volume &#8212; Box Embeddings  documentation</title>
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <link rel="canonical" href="http://iesl.cs.umass.edu/box-embeddings/box_embeddings/modules/volume/bessel_volume/index.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="box_embeddings.modules.volume.soft_volume" href="../soft_volume/index.html" />
+    <link rel="prev" title="box_embeddings.modules.volume" href="../index.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-box_embeddings.modules.volume.bessel_volume">
+<span id="box-embeddings-modules-volume-bessel-volume"></span><h1><a class="reference internal" href="#module-box_embeddings.modules.volume.bessel_volume" title="box_embeddings.modules.volume.bessel_volume"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules.volume.bessel_volume</span></code></a><a class="headerlink" href="#module-box_embeddings.modules.volume.bessel_volume" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#box_embeddings.modules.volume.bessel_volume.BesselApproxVolume" title="box_embeddings.modules.volume.bessel_volume.BesselApproxVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BesselApproxVolume</span></code></a></p></td>
+<td><p>Uses the Softplus as an approximation of</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#box_embeddings.modules.volume.bessel_volume.bessel_volume_approx" title="box_embeddings.modules.volume.bessel_volume.bessel_volume_approx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bessel_volume_approx</span></code></a>(box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor, beta: float = 1.0, gumbel_beta: float = 1.0, scale: float = 1.0) → torch.Tensor</p></td>
+<td><p>Volume of boxes. Uses the Softplus as an approximation of</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#box_embeddings.modules.volume.bessel_volume.log_bessel_volume_approx" title="box_embeddings.modules.volume.bessel_volume.log_bessel_volume_approx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_bessel_volume_approx</span></code></a>(box_tensor: box_embeddings.parameterizations.box_tensor.BoxTensor, beta: float = 1.0, gumbel_beta: float = 1.0, scale: float = 1.0) → torch.Tensor</p></td>
+<td><p>Volume of boxes. Uses the Softplus as an approximation of</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt id="box_embeddings.modules.volume.bessel_volume.eps">
+<code class="sig-prename descclassname"><span class="pre">box_embeddings.modules.volume.bessel_volume.</span></code><code class="sig-name descname"><span class="pre">eps</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1e-23</span></em><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.eps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="box_embeddings.modules.volume.bessel_volume.euler_gamma">
+<code class="sig-prename descclassname"><span class="pre">box_embeddings.modules.volume.bessel_volume.</span></code><code class="sig-name descname"><span class="pre">euler_gamma</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0.5772156649015329</span></em><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.euler_gamma" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="box_embeddings.modules.volume.bessel_volume.bessel_volume_approx">
+<code class="sig-prename descclassname"><span class="pre">box_embeddings.modules.volume.bessel_volume.</span></code><code class="sig-name descname"><span class="pre">bessel_volume_approx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">box_tensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../../parameterizations/box_tensor/index.html#box_embeddings.parameterizations.box_tensor.BoxTensor" title="box_embeddings.parameterizations.box_tensor.BoxTensor"><span class="pre">box_embeddings.parameterizations.box_tensor.BoxTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gumbel_beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.Tensor</span><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.bessel_volume_approx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume of boxes. Uses the Softplus as an approximation of
+Bessel funtion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>box_tensor</strong> – input</p></li>
+<li><p><strong>beta</strong> – the beta parameter for the softplus.</p></li>
+<li><p><strong>gumbel_beta</strong> – the gumbel_beta parameter (same value used in intersection).</p></li>
+<li><p><strong>scale</strong> – scale parameter. Should be left as 1.0 (default)
+in most cases.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tensor of shape (…, ) when self has shape (…, 2, num_dims)</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if scale not in (0,1]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="box_embeddings.modules.volume.bessel_volume.log_bessel_volume_approx">
+<code class="sig-prename descclassname"><span class="pre">box_embeddings.modules.volume.bessel_volume.</span></code><code class="sig-name descname"><span class="pre">log_bessel_volume_approx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">box_tensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../../parameterizations/box_tensor/index.html#box_embeddings.parameterizations.box_tensor.BoxTensor" title="box_embeddings.parameterizations.box_tensor.BoxTensor"><span class="pre">box_embeddings.parameterizations.box_tensor.BoxTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gumbel_beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.Tensor</span><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.log_bessel_volume_approx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume of boxes. Uses the Softplus as an approximation of
+Bessel funtion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>box_tensor</strong> – input.</p></li>
+<li><p><strong>beta</strong> – the beta parameter for the softplus.</p></li>
+<li><p><strong>gumbel_beta</strong> – the gumbel_beta parameter (same value used in intersection).</p></li>
+<li><p><strong>scale</strong> – scale parameter. Should be left as 1.0 (default)
+in most cases.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tensor of shape (…, ) when self has shape (…, 2, num_dims)</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if scale not in (0,1]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="box_embeddings.modules.volume.bessel_volume.BesselApproxVolume">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">box_embeddings.modules.volume.bessel_volume.</span></code><code class="sig-name descname"><span class="pre">BesselApproxVolume</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_scale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gumbel_beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.BesselApproxVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../volume/index.html#box_embeddings.modules.volume.volume.Volume" title="box_embeddings.modules.volume.volume.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">box_embeddings.modules.volume.volume.Volume</span></code></a></p>
+<p>Uses the Softplus as an approximation of
+Bessel function.</p>
+<dl class="py attribute">
+<dt id="box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.default_implementation">
+<code class="sig-name descname"><span class="pre">default_implementation</span></code><em class="property"> <span class="pre">=</span> <span class="pre">hard</span></em><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.default_implementation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.forward">
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_tensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../../parameterizations/box_tensor/index.html#box_embeddings.parameterizations.box_tensor.BoxTensor" title="box_embeddings.parameterizations.box_tensor.BoxTensor"><span class="pre">box_embeddings.parameterizations.box_tensor.BoxTensor</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.Tensor</span><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Soft softplus base (instead of ReLU) volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>box_tensor</strong> – TODO</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.register">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">register</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constructor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exist_ok</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#box_embeddings.modules.volume.bessel_volume.BesselApproxVolume.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transparent method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – TODO</p></li>
+<li><p><strong>constructor</strong> – TODO</p></li>
+<li><p><strong>exist_ok</strong> – TODO</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a wrapped callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/UMass_IESL.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../../../../index.html">Box Embeddings</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=iesl&repo=box-embeddings&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Code</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../common/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.common</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../initializations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.initializations</span></code></a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameterizations/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.parameterizations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings</span></code></a><ul>
+  <li><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules</span></code></a><ul>
+  <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules.volume</span></code></a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules.volume</span></code></a></li>
+      <li>Next: <a href="../soft_volume/index.html" title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">box_embeddings.modules.volume.soft_volume</span></code></a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+<h3>Branches</h3>
+<ul>
+  <li><a href="index.html">dev/main</a></li>
+  <li><a href="../../../../../../main/index.html">main</a></li>
+</ul>
+<h3>Tags</h3>
+<ul>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;Information Extraction and Synthesis Lab., UMass.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/box_embeddings/modules/volume/bessel_volume/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/iesl/box-embeddings" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

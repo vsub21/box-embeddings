@@ -1,0 +1,72 @@
+:mod:`box_embeddings.modules.intersection.gumbel_intersection`
+==============================================================
+
+.. py:module:: box_embeddings.modules.intersection.gumbel_intersection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.intersection.gumbel_intersection.GumbelIntersection
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.intersection.gumbel_intersection.gumbel_intersection
+
+
+.. function:: gumbel_intersection(left: box_embeddings.parameterizations.TBoxTensor, right: box_embeddings.parameterizations.TBoxTensor, gumbel_beta: float = 1.0, approximation_mode: Optional[str] = None) -> box_embeddings.parameterizations.TBoxTensor
+
+   Hard Intersection operation as a function.
+
+   .. note:: This function can give fipped boxes, i.e. where z[i] > Z[i]
+
+   .. todo:: Add support for automatic broadcasting
+
+   :param left: BoxTensor which is the left operand
+   :param right: BoxTensor which is the right operand
+   :param gumbel_beta: Beta parameter
+   :param approximation_mode: Use hard clipping ('clipping') or hard clipping with separeate value
+                              for forward and backward passes  ('clipping_forward') to satisfy the required inequalities.
+                              Set `None` to not use any approximation. (default: `None`)
+
+   :returns: The resulting BoxTensor obtained by interection.
+             It has the same concrete type as the `self` (left operand).
+
+   :raises ValueError: When approximation_mode is not in [None, 'clipping', 'clipping_forward']
+
+
+.. class:: GumbelIntersection(beta: float = 1.0, approximation_mode: Optional[str] = None)
+
+
+   Bases: :class:`box_embeddings.modules.intersection.intersection.Intersection`
+
+   Gumbel intersection operation as a Layer/Module.
+
+   Performs the intersection operation as described in `Improving Local Identifiability in Probabilistic Box Embeddings <https://arxiv.org/abs/2010.04831>`_ .
+
+   .. method:: forward(self, left: box_embeddings.parameterizations.BoxTensor, right: box_embeddings.parameterizations.BoxTensor) -> box_embeddings.parameterizations.BoxTensor
+
+
+   .. method:: register(cls: Type[T], name: str, constructor: str = None, exist_ok: bool = False) -> Callable[([Type[T]], Type[T])]
+      :classmethod:
+
+      Transparent method
+
+      :param name: TODO
+      :param constructor: TODO
+      :param exist_ok: TODO
+
+      :returns: a wrapped callable
+
+
+

@@ -1,0 +1,40 @@
+:mod:`box_embeddings.modules.intersection.intersection`
+=======================================================
+
+.. py:module:: box_embeddings.modules.intersection.intersection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.intersection.intersection.Intersection
+
+
+
+.. class:: Intersection
+
+   Bases: :class:`torch.nn.Module`, :class:`box_embeddings.common.registrable.Registrable`
+
+   Base class for intersection Layer
+
+   .. method:: forward(self, left: box_embeddings.parameterizations.BoxTensor, right: box_embeddings.parameterizations.BoxTensor) -> box_embeddings.parameterizations.BoxTensor
+
+
+   .. method:: register(cls: Type[T], name: str, constructor: str = None, exist_ok: bool = False) -> Callable[([Type[T]], Type[T])]
+      :classmethod:
+
+      Transparent method
+
+      :param name: TODO
+      :param constructor: TODO
+      :param exist_ok: TODO
+
+      :returns: a wrapped callable
+
+
+

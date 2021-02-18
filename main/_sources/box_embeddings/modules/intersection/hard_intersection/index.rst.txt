@@ -1,0 +1,63 @@
+:mod:`box_embeddings.modules.intersection.hard_intersection`
+============================================================
+
+.. py:module:: box_embeddings.modules.intersection.hard_intersection
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.intersection.hard_intersection.HardIntersection
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   box_embeddings.modules.intersection.hard_intersection.hard_intersection
+
+
+.. function:: hard_intersection(left: box_embeddings.parameterizations.TBoxTensor, right: box_embeddings.parameterizations.TBoxTensor) -> box_embeddings.parameterizations.TBoxTensor
+
+   Hard Intersection operation as a function.
+
+   .. note:: This function can give fipped boxes, i.e. where z[i] > Z[i]
+
+   .. todo:: Add support for broadcasting
+
+   :param left: BoxTensor which is the left operand
+   :param right: BoxTensor which is the right operand
+
+   :returns: The resulting BoxTensor obtained by interection.
+             It has the same concrete type as the `self` (left operand).
+
+
+.. class:: HardIntersection
+
+   Bases: :class:`box_embeddings.modules.intersection.intersection.Intersection`
+
+   Hard intersection operation as a Layer/Module
+
+   .. method:: forward(self, left: box_embeddings.parameterizations.BoxTensor, right: box_embeddings.parameterizations.BoxTensor) -> box_embeddings.parameterizations.BoxTensor
+
+
+   .. method:: register(cls: Type[T], name: str, constructor: str = None, exist_ok: bool = False) -> Callable[([Type[T]], Type[T])]
+      :classmethod:
+
+      Transparent method
+
+      :param name: TODO
+      :param constructor: TODO
+      :param exist_ok: TODO
+
+      :returns: a wrapped callable
+
+
+

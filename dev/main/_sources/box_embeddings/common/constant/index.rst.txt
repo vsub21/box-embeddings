@@ -1,0 +1,14 @@
+:mod:`box_embeddings.common.constant`
+=====================================
+
+.. py:module:: box_embeddings.common.constant
+
+
+Module Contents
+---------------
+
+.. data:: TANH_EPS
+   :annotation: = 1e-20
+
+   
+
